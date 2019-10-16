@@ -1,0 +1,23 @@
+{
+  "name": "gadget_management_portal",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "lodash": "^4.17.15",
+    "path": "^0.12.7",
+    "public-ip": "^3.2.0",
+    "request-ip": "^2.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}
